@@ -31,10 +31,21 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: yellow;
 }
 
 #grid-container > .cell.clicked{
     background-color: lightblue;
+    color: black;
+}
 
+#grid-container > .cell.red{
+    background-color: red;
+    color: black;
+}
+
+#grid-container > .cell.green{
+    background-color: green;
+    color: black;
 }
 
