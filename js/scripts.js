@@ -3,39 +3,41 @@
 
 const gridContainer = document.getElementById('grid-container')
 
-const numeriGenerati = [];
 
 function getRandomNumber (min, max){
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+const punteggio = []
+let lenghtPunteggio = punteggio.length
+console.log(lenghtPunteggio)
+
 
 
 for (let i = 1 ; i < 100 + 1 ; i++){
-
     const newCell = document.createElement('div');
     newCell.classList.add('cell');
     newCell.append(i)
+    
 
     newCell.addEventListener('click',
 
     function (){
-
-        // if(newCell.classList.contains('clicked')){
-        //     newCell.classList.remove('clicked')
-        // }else{
-        //     newCell.classList.add('clicked')
-        //     console.log(i)
-        // }
+        
         if (bombs.includes(i)){
             newCell.classList.add('red')
+            alert('hai perso')
         } else {
             newCell.classList.add('green')
+            punteggio.push(1)
+            
         }
     }
     );
     gridContainer.append(newCell)
+    
 }
+
 
 const bombs =[];
 
