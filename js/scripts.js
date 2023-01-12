@@ -8,9 +8,8 @@ function getRandomNumber (min, max){
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const punteggio = []
-let lenghtPunteggio = punteggio.length
-console.log(lenghtPunteggio)
+const punteggio =[];
+
 
 
 
@@ -22,20 +21,21 @@ for (let i = 1 ; i < 100 + 1 ; i++){
 
     newCell.addEventListener('click',
 
-    function (){
-        
+    function (){        
         if (bombs.includes(i)){
             newCell.classList.add('red')
             alert('hai perso')
         } else {
             newCell.classList.add('green')
-            punteggio.push(1)
+            punteggio.push('1')
+            let tot = punteggio.length
+            console.log(tot)
             
         }
+    
     }
     );
     gridContainer.append(newCell)
-    
 }
 
 
